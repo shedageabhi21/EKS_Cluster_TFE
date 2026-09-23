@@ -1,0 +1,34 @@
+# Local .terraform directories (downloaded providers/modules — large, regenerable)
+**/.terraform/*
+
+# Terraform state files — contain sensitive data (IPs, IDs, sometimes secrets)
+# NEVER commit these. Use a remote backend (S3) instead if you want shared state.
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude your actual variable values — only the .example template should be committed
+#*.tfvars
+*.tfvars.json
+#!terraform.tfvars.example
+
+# Ignore override files (local dev overrides, not meant to be shared)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore lock file ONLY if you intentionally don't want to pin provider
+# versions across machines — most teams DO commit this, so it's commented out:
+# .terraform.lock.hcl
+
+# Mac/OS clutter
+.DS_Store
